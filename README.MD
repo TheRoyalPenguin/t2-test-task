@@ -38,13 +38,13 @@
 1) `sudo systemctl edit docker`
 2) Добавлю настройки в открывшийся файл:
 ```
-`[Service]`
-`Environment="HTTP_PROXY=http://proxy.domain.com:80"`
-`Environment="HTTPS_PROXY=http://proxy.domain.com:80"`
-`Environment="NO_PROXY=localhost,127.0.0.1,foo.bar.ru"`
+[Service]
+Environment="HTTP_PROXY=http://proxy.domain.com:80"
+Environment="HTTPS_PROXY=http://proxy.domain.com:80"
+Environment="NO_PROXY=localhost,127.0.0.1,foo.bar.ru"
 ```
 3) `sudo systemctl daemon-reload`
-   `sudo systemctl restart docker`
+4) `sudo systemctl restart docker`
 
 ## Ситуация 5: Ansible роль
 
