@@ -1,0 +1,18 @@
+---
+- name: Install dependencies and Docker
+  apt:
+    name: ['apt-transport-https', 'ca-certificates', 'curl', 'docker.io', 'docker-compose-plugin']
+    state: present
+    update_cache: yes
+
+- name: Create Grafana directories (UID 472 for Grafana container user)
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: "472"
+    group: "472"
+    mode: '0755'
+  loop:
+    - "{{ grafana_data_dir }}"
+    - "{{ grafana_data_dir }}/data"
+    - "{{ grafana_data_dir }}/config"

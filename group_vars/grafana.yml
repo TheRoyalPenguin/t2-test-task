@@ -1,0 +1,5 @@
+---
+grafana_http_port: 3000
+grafana_domain: "grafana.local"
+grafana_root_url: "http://%(domain)s:%(http_port)s/"
+grafana_data_dir: "/opt/grafana"

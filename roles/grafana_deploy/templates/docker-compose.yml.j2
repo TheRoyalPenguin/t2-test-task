@@ -1,0 +1,11 @@
+services:
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    restart: always
+    user: "472"
+    ports:
+      - "{{ grafana_http_port }}:{{ grafana_http_port }}"
+    volumes:
+      - "{{ grafana_data_dir }}/data:/var/lib/grafana"
+      - "{{ grafana_data_dir }}/config/grafana.ini:/etc/grafana/grafana.ini"
