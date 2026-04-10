@@ -13,11 +13,11 @@
 Надо использовать `git rebase`.
 Я нахожусь в своей ветке `my_branch`. Пусть `main` - целевая ветка.
 1) `git fetch origin main`
-   `git rebase origin/main`
-2) `git` скажет что пока нельзя, так как есть конфликт. Открою редактор и вручную разрешу конфликты.
-3) `git add .`
-4) `git rebase --continue`
-5) `git push --force origin my_branch`
+2) `git rebase origin/main`
+3) `git` скажет что пока нельзя, так как есть конфликт. Открою редактор и вручную разрешу конфликты.
+4) `git add .`
+5) `git rebase --continue`
+6) `git push --force origin my_branch`
 
 
 ## Ситуация 3: Тормозит SQL запрос
